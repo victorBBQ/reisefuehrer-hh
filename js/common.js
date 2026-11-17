@@ -27,6 +27,10 @@ function createMap(elementId) {
     maxZoom: 18,
     attribution: 'Tiles &copy; Esri &mdash; Esri, HERE, Garmin, OpenStreetMap-Mitwirkende und die GIS-Community'
   }).addTo(map);
+  // Karte neu berechnen, wenn sich die Containergröße ändert (z. B. Fenster oder Gerät drehen/skalieren).
+  if ("ResizeObserver" in window) {
+    new ResizeObserver(() => map.invalidateSize()).observe(map.getContainer());
+  }
   // Mausrad-Zoom erst nach Klick auf die Karte, damit das Scrollen der Seite nicht stört.
   map.on("focus", () => map.scrollWheelZoom.enable());
   map.on("blur", () => map.scrollWheelZoom.disable());
