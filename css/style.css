@@ -11,7 +11,7 @@
     --muted: #5c5c5c;
     --line: #e2ddd5;
     --radius: 14px;
-    --header-h: 56px;
+    --header-h: 64px;
 }
 
 *,
@@ -91,17 +91,22 @@ p {
     gap: 0 .5rem;
     min-height: var(--header-h);
     padding: 0 .6rem;
-    background: var(--brick);
-    color: #fff;
+    background: #fff;
+    color: var(--text);
+    border-bottom: 4px solid var(--brick);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .12);
 }
 
 .brand {
-    color: #fff;
-    font-weight: 700;
-    text-decoration: none;
-    font-size: .95rem;
-    white-space: nowrap;
-    padding-left: .3rem;
+    display: inline-flex;
+    align-items: center;
+    padding: .2rem .3rem;
+}
+
+.brand img {
+    display: block;
+    height: 48px;
+    width: auto;
 }
 
 .site-header nav {
@@ -110,9 +115,10 @@ p {
 }
 
 .site-header nav a {
-    color: #fff;
+    color: var(--water);
     text-decoration: none;
     font-size: .85rem;
+    font-weight: 600;
     padding: .7rem .5rem;
     border-radius: 8px;
     min-height: 44px;
@@ -122,15 +128,25 @@ p {
 
 .site-header nav a:hover,
 .site-header nav a[aria-current="page"] {
-    background: rgba(255, 255, 255, .18);
+    background: #e8eef4;
 }
 
 /* ---------- Hero ---------- */
 .hero {
-    padding: 2.2rem 1rem 2.4rem;
+    padding: 3rem 1rem 3.2rem;
     text-align: center;
     color: #fff;
-    background: linear-gradient(160deg, var(--water), #123350 70%);
+    background-color: #123350;
+    background-image:
+        linear-gradient(180deg, rgba(10, 25, 45, .55), rgba(10, 25, 45, .72)),
+        url("../img/hero-hamburg-small.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1,
+.hero p {
+    text-shadow: 0 1px 6px rgba(0, 0, 0, .55);
 }
 
 .hero h1 {
@@ -527,6 +543,21 @@ p {
 
 /* ---------- Tablet ---------- */
 @media (min-width: 600px) {
+    .hero {
+        padding: 4.5rem 1.5rem 4.8rem;
+        background-image:
+            linear-gradient(180deg, rgba(10, 25, 45, .45), rgba(10, 25, 45, .7)),
+            url("../img/hero-hamburg.jpg");
+    }
+
+    :root {
+        --header-h: 72px;
+    }
+
+    .brand img {
+        height: 56px;
+    }
+
 
     /* Kategorien umbrechen statt seitlich scrollen */
     .chips {

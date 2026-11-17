@@ -35,5 +35,5 @@ Eintrag in `SIGHTS` (`js/data.js`) mit `id`, `name`, `cat`, `icon`, `lat`, `lng`
 
 ## Hinweise
 
-- Es werden keine Fotos verwendet (Emojis und Farben), damit keine Bildrechte verletzt werden. Eigene Fotos nur mit freier Lizenz einbinden (z. B. Wikimedia Commons).
+- Logo und Titelbild liegen in `img/` (optimierte Versionen: `hero-hamburg.jpg` für Desktop, `hero-hamburg-small.jpg` für Smartphones). Das Titelbild ist eine illustrative, KI-generierte Darstellung. Die Orte selbst werden mit Emojis dargestellt. Weitere Fotos nur mit freier Lizenz einbinden (z. B. Wikimedia Commons).
 - Koordinaten sind ungefähre Werte. Preise und Öffnungszeiten sind bewusst nicht enthalten.
