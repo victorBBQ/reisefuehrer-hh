@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tagesrouten – Reiseführer HH</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E⚓%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">⚓ Reiseführer HH</a>
+    <nav aria-label="Hauptnavigation">
+      <a href="index.html">Entdecken</a>
+      <a href="routen.html" aria-current="page">Tagesrouten</a>
+      <a href="index.html#tipps">Tipps</a>
+    </nav>
+  </header>
+
+  <main class="routes">
+    <h1>Tagesrouten</h1>
+    <p class="lead">Wähle eine Route. Die Stationen sind in sinnvoller Reihenfolge sortiert.</p>
+
+    <div id="route-tabs" class="chips" role="group" aria-label="Route wählen"></div>
+
+    <div id="route-map" class="map" role="region" aria-label="Karte der Route"></div>
+
+    <section id="route-info" class="route-info" aria-live="polite"></section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Fiktives Schulprojekt (Scrum-Praxisprojekt). Kartendaten &copy; OpenStreetMap-Mitwirkende.</p>
+    <p>Die Linie auf der Karte zeigt die Reihenfolge der Stationen (Luftlinie), nicht den genauen Weg.</p>
+  </footer>
+
+  <script src="vendor/leaflet/leaflet.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/routes.js"></script>
+</body>
+</html>

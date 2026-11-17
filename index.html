@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reiseführer HH – Hamburg entdecken</title>
+  <meta name="description" content="Interaktiver Reiseführer für Hamburg: Sehenswürdigkeiten, Routen und Insider-Tipps für Erstbesucher.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E⚓%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">⚓ Reiseführer HH</a>
+    <nav aria-label="Hauptnavigation">
+      <a href="index.html" aria-current="page">Entdecken</a>
+      <a href="routen.html">Tagesrouten</a>
+      <a href="#tipps">Tipps</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Hamburg entdecken</h1>
+    <p>Top-Sehenswürdigkeiten, Tagesrouten und Insider-Tipps für deinen ersten Besuch.</p>
+    <a class="btn" href="#explorer">Los geht's</a>
+  </section>
+
+  <main>
+    <section id="explorer" class="explorer" aria-labelledby="explorer-title">
+      <div class="explorer-controls">
+        <h2 id="explorer-title">Sehenswürdigkeiten</h2>
+        <label class="search">
+          <span class="visually-hidden">Suchen</span>
+          <input id="search" type="search" placeholder="Suchen, z. B. Hafen…" autocomplete="off">
+        </label>
+        <div id="filters" class="chips" role="group" aria-label="Nach Kategorie filtern"></div>
+        <p id="count" class="count" aria-live="polite"></p>
+      </div>
+
+      <div id="map" class="map" role="region" aria-label="Karte der Sehenswürdigkeiten"></div>
+
+      <div id="list" class="cards"></div>
+    </section>
+
+    <section id="tipps" class="section">
+      <h2>Insider-Tipps</h2>
+      <div id="tips" class="tips"></div>
+    </section>
+
+    <section class="section cta">
+      <h2>Du hast nur einen Tag?</h2>
+      <p>Unsere Tagesrouten führen dich in sinnvoller Reihenfolge durch die Stadt.</p>
+      <a class="btn" href="routen.html">Tagesrouten ansehen</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Fiktives Schulprojekt (Scrum-Praxisprojekt). Kartendaten &copy; OpenStreetMap-Mitwirkende.</p>
+    <p>Öffnungszeiten und Preise bitte vor Ort oder auf den offiziellen Seiten prüfen.</p>
+  </footer>
+
+  <script src="vendor/leaflet/leaflet.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
